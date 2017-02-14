@@ -1,0 +1,18 @@
+{% extends '/home/firdavs-senior/teach/my_projects/english/templates/base.html' %}
+{% load staticfiles %}
+{% block t_block %}
+ <title>English</title>
+ {% endblock t_block %}
+ {% block content %}
+ 	<div id="russian">
+ 		{% for word in russian_words %}
+		<button id="r1" n={{word.id}}>{{word.into_russian}}</button><br>
+		{% endfor %}
+	</div>
+	<div id="english">
+		{% for word in english_words %}
+		<button id="e1" n={{word.id}}>{{word.into_english}}</button><br>
+		{% endfor %}
+	</div>
+ <script type="text/javascript" src="{% static 'js/myjs.js' %}"></script>
+ {% endblock content %}
