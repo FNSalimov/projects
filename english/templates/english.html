@@ -4,6 +4,7 @@
  <title>English</title>
  {% endblock t_block %}
  {% block content %}
+ 	{{test}}
  	<div id="russian">
  		{% for word in russian_words %}
 		<button id="r1" n={{word.id}}>{{word.into_russian}}</button><br>

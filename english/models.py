@@ -6,3 +6,6 @@ class Word(models.Model):
 
 	def __str__(self):
 		return self.into_english
+
+	def toJSON(self):
+		return {"Word": {"id": self.id, "into_russian": self.into_russian, "into_english": self.into_english}}
