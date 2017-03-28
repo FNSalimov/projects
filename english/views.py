@@ -20,6 +20,7 @@ def index(request):
 
 def english(request):
     list_of_words = list(Word.objects.all())
+    print(len(list_of_words))
     five_words = []
     for i in range(5):
         random_number = random.randint(1, len(list_of_words) - 1)
@@ -36,3 +37,5 @@ def english(request):
         english_words.append(five_words[random_number])
     return render(request, 'english.html', {'russian_words': russian_words, 'english_words': english_words, 'test': test})
 
+def ping(request):
+    return render(request, 'ping.html', {})

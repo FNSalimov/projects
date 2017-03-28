@@ -1,0 +1,17 @@
+{% extends '/home/firdavs-senior/teach/my_projects/english/templates/base.html' %}
+{% load staticfiles %}
+{% block t_block %}
+	<title>Ping Pong</title>
+{% endblock t_block %}
+{% block content %}
+	<div id="left">
+		<a href=""><img src="{% static 'fonts/left.png' %}" alt="left" height="150" width="10"></a>
+	</div>
+	<div id="right">
+		<a href=""><img src="{% static 'fonts/right.png' %}" alt="right" height="150" width="10"></a>
+	</div>
+	<div id="ball">
+		<a href=""><img src="{% static 'fonts/ball.png' %}" alt="ball" class="img-circle" height="20" width="20"></a>
+	</div>
+<script type="text/javascript" src="{% static 'js/ping.js' %}"></script>
+{% endblock content %}
