@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% load staticfiles %}
+{% block t_block %}
+ <title>Projects</title>
+{% endblock t_block %}
+{% block content %}
+ 	<div id="title"><h1><font color="#A9C1C9">Welcome to my web app</font></h1></div>
+	<div id="pic1">
+ 	   <a href="english"><img src="{% static 'fonts/english.png' %}" alt="English" class="img-circle" height="200" width="300"></a>
+ 	</div>
+	<div id="pic2">
+ 	   <a href="ping"><img src="{% static 'fonts/ping.jpg' %}" alt="English" class="img-circle" height="200" width="300"></a>
+	</div>
+{% endblock content %}

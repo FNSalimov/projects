@@ -1,14 +1,13 @@
-{% extends '/home/firdavs-senior/teach/my_projects/english/templates/base.html' %}
+{% extends './base.html' %}
 {% load staticfiles %}
 {% block t_block %}
  <title>Projects</title>
 {% endblock t_block %}
 {% block content %}
- 	<div id="title"><h1><font color="#A9C1C9">Welcome to my web app</font></h1></div>
-	<div id="pic1">
- 	   <a href="english"><img src="{% static 'fonts/english.png' %}" alt="English" class="img-circle" height="200" width="300"></a>
- 	</div>
-	<div id="pic2">
- 	   <a href="ping"><img src="{% static 'fonts/ping.jpg' %}" alt="English" class="img-circle" height="200" width="300"></a>
-	</div>
+	<main class="site-main">
+		<div class="english">
+			<a href="english"><img src="{% static 'fonts/english.jpg' %}"></a>
+		</div>
+		
+	</main>
 {% endblock content %}

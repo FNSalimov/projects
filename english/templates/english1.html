@@ -7,12 +7,12 @@
  	{{test}}
  	<div id="russian">
  		{% for word in russian_words %}
-		<button n={{word.id}}>{{word.into_russian}}</button><br>
+		<button id="r1" n={{word.id}}>{{word.into_russian}}</button><br>
 		{% endfor %}
 	</div>
 	<div id="english">
 		{% for word in english_words %}
-		<button n={{word.id}}>{{word.into_english}}</button><br>
+		<button id="e1" n={{word.id}}>{{word.into_english}}</button><br>
 		{% endfor %}
 	</div>
  <script type="text/javascript" src="{% static 'js/english.js' %}"></script>

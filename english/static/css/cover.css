@@ -1,7 +1,3 @@
-body {
-  background-color: #323E42;
-}
-
 button {
   background-color: #4286f4;
   margin-bottom: 10px;
@@ -12,21 +8,26 @@ button {
   border-radius: 0 15px;
 }
 
-#title {
-  position: absolute;;
-  top: 50px;
-  left: 500px;
+#lscore {
+  position: absolute;
+  top: 500px;
+  left: 50px;
 }
 
+#rscore {
+  position: absolute;
+  top: 500px;
+  right: 50px;
+}
 #left {
   position: absolute;
-  top: 200px;
+  top: 0px;
   left: 50px;
 }
 
 #right {
   position: absolute;
-  top: 200px;
+  top: 0px;
   right: 50px;
 }
 
@@ -34,18 +35,6 @@ button {
   position: absolute;
   top: 200px;
   left: 400px;
-}
-
-#pic1 {
-  position: absolute;
-  top: 200px;
-  left: 100px;
-}
-
-#pic2 {
-  position: absolute;
-  top: 200px;
-  left: 500px;
 }
 
 #russian {
