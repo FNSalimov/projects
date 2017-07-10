@@ -3,14 +3,18 @@ body, html {
 }
 
 body {
-	background-color: #6d6d6d;
+	background-image: url("../fonts/fon.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	/*background-color: #6d6d6d;*/
+
 }
 
 .site-header {
-	background-color: #6d6d6d;
+	/*background-color: #6d6d6d;*/
 	height: 25%;
-	border: 1px solid black;
-	border-radius: 5px;
+	/*border: 0.1px solid black;
+	border-radius: 5px;*/
 	
 }
 	.site-header h1 {
@@ -20,7 +24,7 @@ body {
 		width: 30%;
 		min-height: 30%;
 		text-align: center;
-		color: white;
+		color: #74ca12;
 		margin-left: 250px;
 		padding: 10px;
 
@@ -34,16 +38,16 @@ body {
 		margin-left: 40px;
 		margin-top: 20px;
 		border-radius: 50%;
-		width: 140px;
-		height: 120px;
+		width: 180px;
+		height: 160px;
 		/*margin-right: 250px;*/
 	}
 
 	.menu {
 		float: right;
 		margin-top: 30px;
-		border: 1px solid black;
-		border-radius: 30px;
+		/*border: 1px solid black;
+		border-radius: 30px;*/
 		margin-right: 20px;
 	}
 
@@ -59,7 +63,7 @@ body {
 	}
 
 	.menu ul li > a {
-		color: white;
+		color: #74ca12;
 		text-decoration: none;
 		cursor: pointer;
 		font-size: 25px;
@@ -70,20 +74,19 @@ body {
 	}
 
 .site-main {
-	margin-top: 5px;
-	background-color: #a3a1a1;
+	margin-top: 100px;
+	/*background-color: #a3a1a1;*/
 	height: 70%;
-	border: 1px solid black;
-	border-radius: 5px;
+	/*border: 0.1px solid black;
+	border-radius: 5px;*/
 }
 	.site-main .english {
 		margin-left: 70px;
-		margin-top: 40px; 
+		/*margin-top: 40px; */
 	}
 	.site-main img {
 		height: 200px;
 		width: 300px;
 		cursor: pointer;
 	}
-
 
