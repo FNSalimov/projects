@@ -1,0 +1,25 @@
+button {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #032042;
+  margin-bottom: 10px;
+  border: 3px solid #74ca12;
+  width: 200px;
+  height: 80px;
+  font-size: 20px;
+  border-radius: 0 15px;
+  color: #74ca12;
+  cursor: pointer;
+}
+
+#russian {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+#english {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+}

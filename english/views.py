@@ -12,6 +12,9 @@ def test(request):
         while list_of_words[random_number] in five_words:
             random_number = random.randint(1, len(list_of_words) - 1)
         five_words.append(list_of_words[random_number])
+    """for i in range(5):
+        five_words[i].into_english = five_words[i].into_english.split(',')[0]
+        five_words[i].into_russian = five_words[i].into_russian.split(',')[0]"""
     jsonStr = json.dumps([w.toJSON() for w in five_words])
     return HttpResponse(jsonStr, content_type='application/json')
 
@@ -27,6 +30,9 @@ def english(request):
         while list_of_words[random_number] in five_words:
             random_number = random.randint(1, len(list_of_words) - 1)
         five_words.append(list_of_words[random_number])
+    """for i in range(5):
+        five_words[i].into_english = five_words[i].into_english.split(',')[0]
+        five_words[i].into_russian = five_words[i].into_russian.split(',')[0]"""
     russian_words = five_words
     random.shuffle(five_words)
     english_words = []
@@ -37,5 +43,5 @@ def english(request):
         english_words.append(five_words[random_number])
     return render(request, 'english.html', {'russian_words': russian_words, 'english_words': english_words, 'test': test})
 
-def ping(request):
-    return render(request, 'ping.html', {})
+def fifteen(request):
+    return render(request, 'fifteen.html', {})

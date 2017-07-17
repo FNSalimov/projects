@@ -1,13 +1,17 @@
 {% extends './base.html' %}
 {% load staticfiles %}
 {% block t_block %}
- <title>Projects</title>
+	<title>Projects</title>
 {% endblock t_block %}
 {% block content %}
 	<main class="site-main">
-		<div class="english">
-			<a href="english"><img src="{% static 'fonts/english.jpg' %}"></a>
+		<div class="firstblock">
+			<div class="english com">
+				<a href="english"><img class="com" src="{% static 'fonts/english.jpg' %}"></a>
+			</div>
+			<div class="fifteen com">
+				<a href="fifteen"><img class="com" src="{% static 'fonts/fifteen.jpg' %}"></a>
+			</div>
 		</div>
-		
 	</main>
 {% endblock content %}
