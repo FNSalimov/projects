@@ -38,6 +38,91 @@ function check() {
 
 mix()
 
+numbers[0].addEventListener("click", function() {
+		numClick(0);
+	});
+numbers[1].addEventListener("click", function() {
+		numClick(1);
+	});
+numbers[2].addEventListener("click", function() {
+		numClick(2);
+	});
+numbers[3].addEventListener("click", function() {
+		numClick(3);
+	});
+numbers[4].addEventListener("click", function() {
+		numClick(4);
+	});
+numbers[5].addEventListener("click", function() {
+		numClick(5);
+	});
+numbers[6].addEventListener("click", function() {
+		numClick(6);
+	});
+numbers[7].addEventListener("click", function() {
+		numClick(7);
+	});
+numbers[8].addEventListener("click", function() {
+		numClick(8);
+	});
+numbers[9].addEventListener("click", function() {
+		numClick(9);
+	});
+numbers[10].addEventListener("click", function() {
+		numClick(10);
+	});
+numbers[11].addEventListener("click", function() {
+		numClick(11);
+	});
+numbers[12].addEventListener("click", function() {
+		numClick(12);
+	});
+numbers[13].addEventListener("click", function() {
+		numClick(13);
+	});
+numbers[14].addEventListener("click", function() {
+		numClick(14);
+	});
+numbers[15].addEventListener("click", function() {
+		numClick(15);
+	});
+
+/*for (var i = 0; i < 16; i++) {
+	console.log(i);
+	numbers[i].addEventListener("click", function() {
+		numClick(i);
+	});
+}*/
+
+function numClick(i) {
+	if (i+1 < 16 && i+1 != 4 && i+1 != 8 && i+1 != 12 && numbers[i+1].innerHTML == "") {
+		numbers[i+1].innerHTML = numbers[i].innerHTML;
+		numbers[i+1].style.backgroundColor = "green";
+		numbers[i].innerHTML = "";
+		numbers[i].style.backgroundColor = "#0565ba";
+		sixteen = i;
+	} else if (i-1 >= 0 && i-1 != 3 && i-1 != 7 && i-1 != 11 && numbers[i-1].innerHTML == "") {
+		numbers[i-1].innerHTML = numbers[i].innerHTML;
+		numbers[i-1].style.backgroundColor = "green";
+		numbers[i].innerHTML = "";
+		numbers[i].style.backgroundColor = "#0565ba";
+		sixteen = i;
+	} else if (i+4 < 16 && numbers[i+4].innerHTML == "") {
+		numbers[i+4].innerHTML = numbers[i].innerHTML;
+		numbers[i+4].style.backgroundColor = "green";
+		numbers[i].innerHTML = "";
+		numbers[i].style.backgroundColor = "#0565ba";
+		sixteen = i;
+	} else if (i-4 >= 0 && numbers[i-4].innerHTML == "") {
+		numbers[i-4].innerHTML = numbers[i].innerHTML;
+		numbers[i-4].style.backgroundColor = "green";
+		numbers[i].innerHTML = "";
+		numbers[i].style.backgroundColor = "#0565ba";
+		sixteen = i;
+	}
+	check();
+}
+
 function move(e) {
 	switch(e.keyCode) {
 		case 37:
@@ -81,6 +166,10 @@ function move(e) {
 			check();
 			break;
 	}
+	/*for (var i = 0; i < 16; i++) {
+		console.log(numbers[i].innerHTML);
+	}
+	console.log("URAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");*/
 }
 
 window.addEventListener("keyup", move);
