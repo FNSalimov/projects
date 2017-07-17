@@ -5,6 +5,12 @@
 	<title>Fifteen</title>
 {% endblock t_block %}
 {% block content %}
+	<div class="timer">
+		<span>Time &nbsp&nbsp</span>
+		<span class="minutes">00</span>
+		<span>:</span>
+		<span class="seconds">00</span>
+	</div>
 	<div class="desk">
 		<div class="first com" n="1">1</div>
 		<div class="second com" n="2">2</div>
@@ -26,5 +32,6 @@
 		<div class="fifteenth com" n="15">15</div>
 		<div class="sixteenth com" n="16"></div>
 	</div>
+	<div class="begin">Begin!</div>
 <script type="text/javascript" src="{% static 'js/fifteen.js' %}"></script>
 {% endblock content %}

@@ -1,6 +1,8 @@
+document.querySelector(".begin").addEventListener("click", mix);
 var numbers = document.querySelectorAll(".com");
-var sixteen;
-
+var sixteen = 15;
+var minutes = document.querySelector(".minutes");
+var seconds = document.querySelector(".seconds");
 function compareRandom(a, b) {
 	return Math.random() - 0.5;
 }
@@ -18,6 +20,21 @@ function mix() {
 	numbers[appnum[15]].style.backgroundColor = "#0565ba";
 	numbers[appnum[15]].innerHTML = "";
 	sixteen = appnum[15];
+	minutes.innerHTML = "00";
+	seconds.innerHTML = "00";
+	var timerId = setInterval(function() {
+		seconds.innerHTML = String(Number(seconds.innerHTML) + 1);
+		if ((seconds.innerHTML).length == 1) {
+			seconds.innerHTML = "0" + seconds.innerHTML;
+		} else if (Number(seconds.innerHTML) == 60) {
+			minutes.innerHTML = String(Number(minutes.innerHTML) + 1);
+			if (minutes.innerHTML.length == 1) {
+				minutes.innerHTML = "0" + minutes.innerHTML;
+			}
+			seconds.innerHTML = "00";
+		}
+
+	}, 1000)
 }
 
 function check() {
@@ -29,14 +46,13 @@ function check() {
 		}
 	}
 	if (flag) {
-		var again = confirm("Вы сделали это! :) Хотите поиграть еще?");
+		var constr = "You did it! :) Your result is " + minutes.innerHTML + ":" + seconds.innerHTML + " Will you play again?";
+		var again = confirm(constr);
 		if (again) {
 			mix();
 		}
 	}
 }
-
-mix()
 
 numbers[0].addEventListener("click", function() {
 		numClick(0);
