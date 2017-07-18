@@ -1,8 +1,5 @@
 jQuery('document').ready(function() {
 	var all_buttons = document.getElementsByTagName('button');
-	for (var i = 0; i < all_buttons.length; i++) {
-		console.log(jQuery(all_buttons[i]).text().length);
-	}
 	var result = 0;
 	var ind_this;
 	var end;

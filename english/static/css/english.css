@@ -12,6 +12,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #2d3033;
+}
+
 #russian {
   position: absolute;
   top: 200px;
