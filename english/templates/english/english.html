@@ -1,0 +1,20 @@
+{% extends 'english/base.html' %}
+{% load staticfiles %}
+{% block t_block %}
+	<link rel="stylesheet" type="text/css" href="{% static 'english/css/english.css' %}">
+	<title>English</title>
+{% endblock t_block %}
+{% block content %}
+	{{test}}
+	<div id="russian">
+		{% for word in russian_words %}
+	<button n={{word.id}}>{{word.into_russian}}</button><br>
+	{% endfor %}
+</div>
+<div id="english">
+	{% for word in english_words %}
+	<button n={{word.id}}>{{word.into_english}}</button><br>
+	{% endfor %}
+</div>
+<script type="text/javascript" src="{% static 'english/js/english.js' %}"></script>
+{% endblock content %}

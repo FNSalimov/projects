@@ -1,0 +1,20 @@
+{% extends 'english/base.html' %}
+{% load staticfiles %}
+{% block t_block %}
+	<title>Projects</title>
+{% endblock t_block %}
+{% block content %}
+	<div class="container">
+		<div class="row up">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 secondrow">
+				<a href="{% url 'english:english' %}" class="upp"><img class="firstblock" src="{% static 'english/fonts/english.jpg' %}"></a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 secondrow">
+				<a href="{% url 'english:fifteen' %}" class="upp"><img class="firstblock" src="{% static 'english/fonts/fifteen.jpg' %}"></a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 secondrow">
+				<a href="{% url 'english:news' %}" class="upp"><img class="firstblock" src="{% static 'english/fonts/news.jpg' %}"></a>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

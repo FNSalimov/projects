@@ -1,0 +1,30 @@
+{% extends '../../english/templates/english/base.html' %}
+{% load staticfiles %}
+{% block t_block %}
+	<link rel="stylesheet" type="text/css" href="{% static 'rssreader/css/profile.css' %}">
+	<title>English</title>
+{% endblock t_block %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 left">
+				<span class="h">Hey, {{name}}</span><br>
+				<form action="{% url 'english:add' userid %}" method="post">
+					{% csrf_token %}
+					<label>You can some rss feed<br>
+						<input type="url" name="feedurl"><br>
+						<input type="submit" name="addfeed">
+					</label>
+				</form>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 right">
+				<span class="h">List of your rss feeds</span><br>
+				<ul>
+					{% for feed in feeds %}
+						<li>{{feed.url}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
