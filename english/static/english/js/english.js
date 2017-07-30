@@ -1,5 +1,5 @@
 jQuery('document').ready(function() {
-	var all_buttons = document.getElementsByTagName('button');
+	var all_buttons = jQuery('button');
 	var result = 0;
 	var ind_this;
 	var end;

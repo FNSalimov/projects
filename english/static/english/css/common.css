@@ -5,9 +5,9 @@
 .secondrow {
 	height: 300px;
 }
-
-
-
+	.secondrow img:hover {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 16px 20px 0 rgba(0,0,0,0.19);
+	}
 body, html {
 	height: 100%;
 	margin: 0;
@@ -17,7 +17,7 @@ body {
 	background-image: url("../fonts/fon.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	/*background-color: #6d6d6d;*/
+	background-color: #000207;
 }
 
 .first img {
@@ -33,17 +33,26 @@ body {
 }
 
 .second {
-	padding-top: 10px;
 	text-align: center;
-	color: #74ca12;
-	font-family: Webdings;
+	padding-top: 50px;
 }
-
+	.title {
+		font-size: 40px;
+		font-family: 'Pacifico';
+		
+		color: white;
+		margin-top: 300px;
+	}
 .third {
 	padding-top: 5%;
 	padding-left: 5%;
 }
 
+/*.menu {
+	background-color: grey;
+	border-radius: 15px;
+	height: 45px;
+}*/
 .menu ul li {
 		list-style: none;
 		display: inline;
@@ -56,14 +65,17 @@ body {
 	}
 
 	.menu ul li > a {
-		color: #74ca12;
+		color: white;
 		text-decoration: none;
 		cursor: pointer;
+		font-family: 'Pacifico';
 		font-size: 25px;
+		transition: all .8s;
 	}
 	
 	.menu ul li a:hover {
-		color: black;
+		background-color: black;
+		border-radius: 20px;
 	}
 
 .firstblock {
@@ -72,4 +84,24 @@ body {
 		margin-left: 10%;
 		margin-top: 5%;
 		border-radius: 15px;
+}
+
+.another {
+	margin-top: 33px;
+}
+
+@media (max-width: 767px) {
+  .first img {
+  	height: 100px;
+  }
+  .title {
+  	font-size: 20px;
+  }
+  .menu ul li > a {
+  	font-size: 15px;
+  }
+  .secondrow {
+  	height: 230px;
+  }
+
 }
