@@ -30,3 +30,12 @@ button:hover {
   position: absolute;
   left: 20%;
 }
+
+@media (max-width: 360px) {
+  .english {
+    left: 20%;
+  }
+  .russian {
+    left: 0;
+  }
+}
