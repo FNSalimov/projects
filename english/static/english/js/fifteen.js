@@ -53,6 +53,8 @@ window.onload = function() {
 			var again = confirm(constr);
 			if (again) {
 				mix();
+			} else {
+				clearInterval(timerId);
 			}
 		}
 	}

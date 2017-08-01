@@ -8,6 +8,5 @@ $(function() {
 			$(".icons").fadeOut(1000);
 			flag = 1;
 		}
-		console.log(flag);
-	})
+	});
 });

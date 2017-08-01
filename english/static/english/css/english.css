@@ -23,12 +23,12 @@ button:hover {
 
 .russian {
   position: absolute;
-  left: 40%;
+  left: 50%;
 }
 
 .english {
   position: absolute;
-  left: 20%;
+  left: 10%;
 }
 
 @media (max-width: 360px) {
