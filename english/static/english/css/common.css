@@ -39,13 +39,13 @@ body {
 	.title {
 		font-size: 40px;
 		font-family: 'Pacifico';
-		
 		color: white;
 		margin-top: 300px;
 	}
 .third {
 	padding-top: 5%;
 	padding-left: 5%;
+	position: relative;
 }
 
 /*.menu {
@@ -53,6 +53,11 @@ body {
 	border-radius: 15px;
 	height: 45px;
 }*/
+.icons {
+	position: absolute;
+	right: 10%;
+	top: 30%;
+}
 .menu ul li {
 		list-style: none;
 		display: inline;
@@ -90,12 +95,25 @@ body {
 	margin-top: 33px;
 }
 
+.blue {
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	right: 50%;
+	top: 30%;
+	display: none;
+}
+
+.blue:hover {
+	color: red;
+}
 @media (max-width: 767px) {
   .first img {
-  	height: 100px;
+  	height: 75px;
   }
   .title {
-  	font-size: 20px;
+  	font-size: 30px;
   }
   .menu ul li > a {
   	font-size: 15px;
@@ -103,5 +121,20 @@ body {
   .secondrow {
   	height: 230px;
   }
+  .icons {
+  	top: 45%;
+  	display: none;
+  }
+  .menu ul li:first-child {
+  	border: none;
+  }
+  .blue {
+  	display: block !important;
+  }
+}
 
+@media (min-width: 767px) {
+	.icons {
+		display: block !important;
+	}
 }
