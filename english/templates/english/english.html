@@ -2,19 +2,27 @@
 {% load staticfiles %}
 {% block t_block %}
 	<link rel="stylesheet" type="text/css" href="{% static 'english/css/english.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 	<title>English</title>
 {% endblock t_block %}
 {% block content %}
-	{{test}}
-	<div id="russian">
-		{% for word in russian_words %}
-	<button n={{word.id}}>{{word.into_russian}}</button><br>
-	{% endfor %}
-</div>
-<div id="english">
-	{% for word in english_words %}
-	<button n={{word.id}}>{{word.into_english}}</button><br>
-	{% endfor %}
-</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 words">
+				<div class="russian">
+					{% for word in russian_words %}
+						<button n={{word.id}}>{{word.into_russian}}</button><br>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 words">
+				<div class="english">
+					{% for word in english_words %}
+						<button n={{word.id}}>{{word.into_english}}</button><br>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
 <script type="text/javascript" src="{% static 'english/js/english.js' %}"></script>
 {% endblock content %}
