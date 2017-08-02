@@ -5,10 +5,10 @@ window.onload = function() {
 	var sixteen = 15;
 	var minutes = document.querySelector(".minutes");
 	var seconds = document.querySelector(".seconds");
+	mix();
 	function compareRandom(a, b) {
 		return Math.random() - 0.5;
 	}
-
 	function mix() {
 		var appnum = [];
 		for (var i = 0; i < 16; i++) {
@@ -21,23 +21,44 @@ window.onload = function() {
 		}
 		numbers[appnum[15]].style.backgroundColor = "#0565ba";
 		numbers[appnum[15]].innerHTML = "";
-		sixteen = appnum[15];
-		minutes.innerHTML = "00";
-		seconds.innerHTML = "00";
-		clearInterval(timerId);
-		timerId = setInterval(function() {
-			seconds.innerHTML = String(Number(seconds.innerHTML) + 1);
-			if ((seconds.innerHTML).length == 1) {
-				seconds.innerHTML = "0" + seconds.innerHTML;
-			} else if (Number(seconds.innerHTML) == 60) {
-				minutes.innerHTML = String(Number(minutes.innerHTML) + 1);
-				if (minutes.innerHTML.length == 1) {
-					minutes.innerHTML = "0" + minutes.innerHTML;
-				}
-				seconds.innerHTML = "00";
+		var inv = [];
+		for (var i = 0; i < 16; i++) {
+			if (numbers[i].innerHTML != "")
+				inv.push(Number(numbers[i].innerHTML))
+		}
+		console.log(inv);
+		var inversions = 0;
+		for (var i = 0; i < 15; i++) {
+			for (var j = i; j < 15; j++) {
+				if (inv[i] > inv[j])
+					inversions++;
 			}
+		}
+		var k = 0;
+		if (appnum[15] < 4 || (appnum[15] > 7 && appnum[15] < 12))
+			k = 1;
+		if ((inversions + k) % 2 == 1)
+			mix();
+		else {
+			sixteen = appnum[15];
+			console.log(appnum[15]);
+			minutes.innerHTML = "00";
+			seconds.innerHTML = "00";
+			clearInterval(timerId);
+			timerId = setInterval(function() {
+				seconds.innerHTML = String(Number(seconds.innerHTML) + 1);
+				if ((seconds.innerHTML).length == 1) {
+					seconds.innerHTML = "0" + seconds.innerHTML;
+				} else if (Number(seconds.innerHTML) == 60) {
+					minutes.innerHTML = String(Number(minutes.innerHTML) + 1);
+					if (minutes.innerHTML.length == 1) {
+						minutes.innerHTML = "0" + minutes.innerHTML;
+					}
+					seconds.innerHTML = "00";
+				}
 
-		}, 1000)
+			}, 1000)
+		}
 	}
 
 	function check() {
@@ -145,6 +166,7 @@ window.onload = function() {
 	}
 
 	function move(e) {
+		console.log(sixteen);
 		switch(e.keyCode) {
 			case 37:
 				if (sixteen != 3 && sixteen != 7 && sixteen != 11 && sixteen != 15) {
